@@ -1,0 +1,493 @@
+/* Reset styles */
+html {
+    scroll-behavior: smooth;
+}
+html, body {
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure consistent sizing */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    position: sticky; /* Sticky header */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* Container inside the header */
+.navbar {
+    max-width: 1200px; /* Limit the width of the header content */
+    margin: 0 auto; /* Center the content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Add padding inside the header */
+}
+
+/* Logo */
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.logo a:hover {
+    color: gray; /* Accent color on hover */
+}
+
+/* Navigation links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: gray; /* Accent color on hover */
+}
+
+/* Main image container */
+.main-image {
+    margin: 0; /* Remove any default margin */
+}
+
+/* Image styling */
+.main-image img {
+    display: block; /* Remove inline spacing issues */
+    width: 100%; /* Responsive width */
+    max-width: 100%; /* Restrict to the width of the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure proper fit */
+}
+
+/* About Me Section */
+.about-me {
+    background-color: #555; /* Gray background */
+    color: #fff; /* White text */
+    padding: 50px 20px; /* Space around the text */
+    display: flex; /* Flexbox to arrange animation and text side by side */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Vertically align the text and animation */
+}
+
+.about-me .container {
+    max-width: 1200px; /* Increase container width to accommodate both the text and animation */
+    display: flex; /* Flexbox to arrange animation and text side by side */
+    align-items: center; /* Vertically align the text and animation */
+    justify-content: flex-start; /* Align items starting from the left */
+    width: 100%;
+}
+
+.about-me h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-me p {
+    font-size: 1.2em;
+    line-height: 1.8; /* Improved line spacing for readability */
+    margin-bottom: 20px;
+    text-align: left; /* Left-align the text */
+    max-width: 600px; /* Limit text width to avoid overly stretched lines */
+}
+
+.about-me .about-animation {
+    margin-right: 30px; /* Space between the animation and the text */
+    flex-shrink: 0; /* Prevent animation from shrinking */
+    width: 250px; /* Set fixed width for the animation */
+    height: 250px; /* Set fixed height for the animation */
+}
+
+/* Projects Section */
+.projects {
+    background-color: gray; /* Light background for contrast */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.projects .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects h1 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: black; /* Darker text for contrast */
+}
+
+/* Grid layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between grid items */
+}
+
+/* Grid item styles */
+.grid-item {
+    border: 2px solid gray; /* Gray border around each item */
+    padding: 10px;
+    border-radius: 5px; /* Slightly rounded corners */
+    background-color: #333; /* White background inside each item */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+}
+
+.grid-item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Images inside the grid */
+.grid-item img {
+    width: 100%;
+    height: 150px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensure images are cropped properly */
+    border-radius: 3px;
+}
+
+/* Text inside the grid items */
+.grid-item p {
+    margin: 10px 0 0;
+    font-size: 1.1em;
+    color: #333; /* Text color */
+}
+
+/* Contact Me Section */
+.contact {
+    background-color: #555;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Ensure h1 is positioned on top */
+.contact h1 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: black;
+}
+
+/* Use flexbox for side-by-side layout of contact info and animation */
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Layout for the contact info */
+.contact-info {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex: 1;
+}
+
+/* Contact item styling */
+.info-item {
+    background-color: white;
+    padding: 20px;
+    border: 2px solid gray;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px;
+}
+
+.info-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.info-item h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.info-item p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.info-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.info-item a:hover {
+    color: gray;
+}
+
+.text-shadow {
+    font-size: 2rem;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer styles */
+.footer {
+    background-color: #333; /* Match header background */
+    color: #fff; /* White text */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Top shadow */
+}
+
+.footer-container {
+    max-width: 1200px; /* Restrict content width */
+    margin: 0 auto; /* Center content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Space between elements */
+}
+
+.footer-logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-logo a:hover {
+    color: gray; /* Accent color on hover */
+}
+
+.footer-nav {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: gray; /* Accent color on hover */
+}
+
+.footer-contact {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.footer-contact a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-contact a:hover {
+    color: gray; /* Accent color on hover */
+}
+
+.footer-copyright {
+    font-size: 0.8em;
+    color: #bbb;
+}
+
+/* Container styles for images linked */
+/* Container styles for images linked */
+.container1 {
+    margin: 100px auto 0; /* Center horizontally with auto margins */
+    width: 80%;  /* Make the container take up 80% of the width */
+    max-width: 1200px; /* Optional: set a max-width to avoid the images being too stretched on large screens */
+    height: 450px;
+    display: flex;
+    justify-content: center; /* Ensure the content inside is centered */
+    gap: 10px;
+}
+
+/* Ensure that the figure and image inside it are centered */
+.container1 figure {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex; /* Use flexbox to center the content inside */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+.container1 img {
+    width: 80%; /* Take full width of the figure */
+    height: 100%; /* Take full height of the figure */
+    object-fit: cover; /* Ensure the image covers the area */
+    border-radius: 10px;
+    border: 2px solid #333;
+    transition: all ease-in-out 0.5s;
+}
+
+.container1 img:hover {
+    width: 105%; /* Slightly enlarge the image on hover */
+    object-fit: cover;
+}
+
+.container1 figcaption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 90%;
+    text-align: center;
+    visibility: hidden; /* Hidden by default */
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s;
+}
+
+.container1 figure:hover figcaption {
+    visibility: visible;
+    opacity: 1;
+}
+/* Default styles (for larger screens) remain as they are */
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    /* General layout adjustments */
+    html, body {
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+
+    /* Header styles */
+    header {
+        padding: 5px 10px;
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .logo a {
+        font-size: 1.2em;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack navigation links vertically */
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Main image */
+    .main-image img {
+        height: auto; /* Allow images to adjust naturally */
+    }
+
+    /* About Me section */
+    .about-me {
+        flex-direction: column; /* Stack animation and text vertically */
+        padding: 20px;
+    }
+
+    .about-me .about-animation {
+        margin: 0 auto 20px; /* Center animation and add spacing */
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-me h1 {
+        font-size: 2em;
+    }
+
+    .about-me p {
+        font-size: 1em;
+    }
+
+    /* Projects section */
+    .projects .container {
+        padding: 10px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller grid items */
+    }
+
+    /* Grid item adjustments */
+    .grid-item img {
+        height: auto; /* Allow height to adjust */
+    }
+
+    /* Contact section */
+    .contact-content {
+        flex-direction: column; /* Stack contact info vertically */
+        gap: 20px;
+    }
+
+    .info-item {
+        width: 100%; /* Make items take full width */
+    }
+
+    /* Footer adjustments */
+    .footer-container {
+        flex-direction: column; /* Stack footer items */
+        gap: 5px;
+    }
+
+    .footer-nav {
+        flex-direction: column; /* Stack navigation links vertically */
+        gap: 10px;
+    }
+
+    /* Image containers */
+    .container1 {
+        flex-direction: column; /* Stack images vertically */
+        gap: 20px;
+    }
+
+    .container1 img {
+        width: 100%; /* Take up full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .container1 figcaption {
+        font-size: 12px; /* Smaller captions */
+        width: 95%;
+    }
+}
